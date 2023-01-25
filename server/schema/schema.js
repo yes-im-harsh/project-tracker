@@ -120,7 +120,7 @@ const mutations = new GraphQLObjectType({
         id: { type: GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
-        return Client.findByIdAndRemove(args.id);
+        return Client.findByIdAndDelete(args.id);
       },
     },
 
